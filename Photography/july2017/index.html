@@ -2,7 +2,24 @@
 <html>
 <head>
   <title>July 2017</title>
-  <script src="../../javascripts/masonry.pkgd.min.js"></script>
+      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+      <script src="../../javascripts/masonry.pkgd.min.js"></script>
+     <style>
+       /* fluid 5 columns */
+      .grid-sizer,
+      .grid-item { width: 20%; }
+      /* 2 columns */
+      .grid-item--width2 { width: 40%; }
+    </style>
+  <script>
+    ('.grid').masonry({
+    // set itemSelector so .grid-sizer is not used in layout
+    itemSelector: '.grid-item',
+    // use element for option
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  })
+ </script>  
  </head>
 <body>
 <div class="grid">
